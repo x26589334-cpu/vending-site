@@ -6,24 +6,15 @@
 ## 배포
 
 - 저장소: `x26589334-cpu/vending-site` (public)
-- 임시 주소: **https://x26589334-cpu.github.io/vending-site/**
+- 주소: **https://pickfree.co.kr/** (www·http 모두 접속됨, HTTPS 강제 적용)
+- 임시 주소(살아있음): https://x26589334-cpu.github.io/vending-site/ → pickfree.co.kr로 리다이렉트
 - `main` 브랜치 루트가 곧 사이트. **push하면 그대로 반영**된다(빌드 없음).
 
-### 예정 도메인: pickfree.co.kr (아직 연결 안 함)
+### 커스텀 도메인 (연결 완료 2026-09-03)
 
-2026-09-03 기준 `pickfree.co.kr`은 DNS가 응답하지 않는다(A·NS 조회 실패 = 네임서버 미설정).
-**CNAME 파일을 먼저 만들면 github.io 주소가 도메인으로 리다이렉트되어 임시 사이트까지
-접속이 끊기므로**, DNS가 붙은 것을 확인한 뒤에 연결한다. 연결 순서:
-
-1. 도메인 DNS에 아래 레코드 추가
-   - `@` A 레코드 4개: `185.199.108.153` / `185.199.109.153` / `185.199.110.153` / `185.199.111.153`
-   - `www` CNAME: `x26589334-cpu.github.io`
-2. `nslookup pickfree.co.kr`으로 위 IP가 나오는지 확인
-3. 루트에 `CNAME` 파일 생성(내용: `pickfree.co.kr`) 후 push
-4. `gh api -X PUT repos/x26589334-cpu/vending-site/pages -f cname=pickfree.co.kr`
-   → 이어서 Pages 설정에서 HTTPS(Enforce HTTPS) 켜기
-5. `robots.txt`·`sitemap.xml`의 `https://x26589334-cpu.github.io/vending-site` →
-   `https://pickfree.co.kr`로 일괄 치환
+`CNAME` 파일 = `pickfree.co.kr`, Pages custom domain 설정 + HTTPS 강제까지 적용됨.
+가비아 네임서버에 A 레코드 4개(185.199.108~111.153)와 `www` CNAME(`x26589334-cpu.github.io`)이
+들어가 있다. 도메인을 바꿀 일이 생기면 `CNAME` 파일 + `robots.txt` + `sitemap.xml` 세 곳을 같이 고칠 것.
 
 ## 아직 정해지지 않은 것
 
