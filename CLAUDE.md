@@ -1,17 +1,25 @@
 # 무인자판기 설치 전문 사이트 (vending-site)
 
 무인자판기 · 무인키오스크 설치를 소개하는 정적 사이트. 빌드 도구 없이 HTML/CSS/JS 파일만으로
-동작하며 GitHub Pages에 그대로 올리면 배포된다.
+동작한다.
 
-## 아직 정해지지 않은 것 (실제 정보 받으면 전부 교체할 것)
+## 배포
+
+- 저장소: `x26589334-cpu/vending-site` (public)
+- 임시 주소: **https://x26589334-cpu.github.io/vending-site/**
+- `main` 브랜치 루트가 곧 사이트. **push하면 그대로 반영**된다(빌드 없음).
+- 커스텀 도메인을 붙일 때는 루트에 `CNAME` 파일을 만들고, `robots.txt`·`sitemap.xml`의
+  `https://x26589334-cpu.github.io/vending-site` 주소도 같이 바꿀 것.
+
+## 아직 정해지지 않은 것
 
 - **브랜드명 `VENDA`** — 임시값. 모든 페이지의 `.logo__mark`, `.ftr__logo`, `<title>`,
   메타 설명에 들어있다. 실제 상호가 정해지면 일괄 치환.
-- **대표번호 `1600-0000`** (`tel:16000000`) — 임시값. 헤더/푸터/CTA/모바일 하단바에 있음.
 - **푸터 사업자 정보** — "상호 · 사업자등록번호 · 주소 등 사업자 정보 표기 예정" 자리.
-- **`robots.txt` / `sitemap.xml`의 `https://example.com`** — 실제 도메인으로 교체.
-- **상담 폼** — 현재 전송 백엔드가 없어 `site.js`에서 안내 문구만 띄운다
-  (`form[data-contact]`). Formspree·Google Form·자체 API 중 하나에 연결해야 실제 접수됨.
+- 대표번호는 공용 번호 **010-6832-1994**로 넣어 두었다(다른 바인그룹 사이트와 동일).
+- 상담 폼은 공용 Apps Script 웹앱 → 구글 "웹 문의" 시트의 **`무인자판기` 탭**으로 들어간다
+  (`startup.html`의 `form[data-sheet]`, hidden `sheet=무인자판기`). 필드 name이 한글이라
+  그대로 시트 헤더가 되므로 이름을 바꾸면 컬럼이 새로 생긴다.
 
 ## 페이지 구조
 
