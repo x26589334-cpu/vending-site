@@ -1,4 +1,4 @@
-# 무인자판기 설치 전문 사이트 (vending-site)
+# 픽프리(PICKFREE) — 무인자판기 설치 전문 사이트 (vending-site)
 
 무인자판기 · 무인키오스크 설치를 소개하는 정적 사이트. 빌드 도구 없이 HTML/CSS/JS 파일만으로
 동작한다.
@@ -8,14 +8,28 @@
 - 저장소: `x26589334-cpu/vending-site` (public)
 - 임시 주소: **https://x26589334-cpu.github.io/vending-site/**
 - `main` 브랜치 루트가 곧 사이트. **push하면 그대로 반영**된다(빌드 없음).
-- 커스텀 도메인을 붙일 때는 루트에 `CNAME` 파일을 만들고, `robots.txt`·`sitemap.xml`의
-  `https://x26589334-cpu.github.io/vending-site` 주소도 같이 바꿀 것.
+
+### 예정 도메인: pickfree.co.kr (아직 연결 안 함)
+
+2026-09-03 기준 `pickfree.co.kr`은 DNS가 응답하지 않는다(A·NS 조회 실패 = 네임서버 미설정).
+**CNAME 파일을 먼저 만들면 github.io 주소가 도메인으로 리다이렉트되어 임시 사이트까지
+접속이 끊기므로**, DNS가 붙은 것을 확인한 뒤에 연결한다. 연결 순서:
+
+1. 도메인 DNS에 아래 레코드 추가
+   - `@` A 레코드 4개: `185.199.108.153` / `185.199.109.153` / `185.199.110.153` / `185.199.111.153`
+   - `www` CNAME: `x26589334-cpu.github.io`
+2. `nslookup pickfree.co.kr`으로 위 IP가 나오는지 확인
+3. 루트에 `CNAME` 파일 생성(내용: `pickfree.co.kr`) 후 push
+4. `gh api -X PUT repos/x26589334-cpu/vending-site/pages -f cname=pickfree.co.kr`
+   → 이어서 Pages 설정에서 HTTPS(Enforce HTTPS) 켜기
+5. `robots.txt`·`sitemap.xml`의 `https://x26589334-cpu.github.io/vending-site` →
+   `https://pickfree.co.kr`로 일괄 치환
 
 ## 아직 정해지지 않은 것
 
-- **브랜드명 `VENDA`** — 임시값. 모든 페이지의 `.logo__mark`, `.ftr__logo`, `<title>`,
-  메타 설명에 들어있다. 실제 상호가 정해지면 일괄 치환.
 - **푸터 사업자 정보** — "상호 · 사업자등록번호 · 주소 등 사업자 정보 표기 예정" 자리.
+- 브랜드 표기는 **로고·푸터 = `PICKFREE`, 타이틀·저작권 = `픽프리`** 로 통일했다
+  (같은 계열: [pickpos] 픽포스 / hsupporter.com).
 - 대표번호는 공용 번호 **010-6832-1994**로 넣어 두었다(다른 바인그룹 사이트와 동일).
 - 상담 폼은 공용 Apps Script 웹앱 → 구글 "웹 문의" 시트의 **`무인자판기` 탭**으로 들어간다
   (`startup.html`의 `form[data-sheet]`, hidden `sheet=무인자판기`). 필드 name이 한글이라
