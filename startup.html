@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>무인창업 — 자판기 창업비용 · 수익 구조 · 상담 | VENDA</title>
+<meta name="description" content="무인자판기 창업 비용과 수익 구조, 직접 운영과 위탁운영의 차이를 솔직하게 안내합니다. 무인점포·무인편의점·무인문구점·무인아이스크림 할인점 창업까지 소자본으로 시작하세요.">
+<meta name="keywords" content="무인창업, 자판기 창업, 자판기 창업비용, 자판기 수익, 소자본창업, 부업창업, 무인점포 창업, 무인문구점, 자판기 대여">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="index.html">
+      <span class="logo__mark">VENDA</span>
+      <span class="logo__sub">무인자판기 설치</span>
+    </a>
+    <nav class="nav">
+      <a href="machines.html">자판기소개</a>
+      <a href="locations.html">지역찾기</a>
+      <a href="installations.html">설치현황</a>
+      <a href="startup.html" aria-current="page">무인창업</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="hdr__tel" href="tel:01068321994">010-6832-1994</a>
+      <a class="btn btn--sm" href="#contact">설치 상담</a>
+      <button class="burger" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mnav">
+    <a href="machines.html">자판기소개</a>
+    <a href="locations.html">지역찾기</a>
+    <a href="installations.html">설치현황</a>
+    <a href="startup.html">무인창업</a>
+    <a class="btn" href="#contact">무료 설치 상담 신청</a>
+  </div>
+</header>
+
+<section class="phead">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">홈</a> &nbsp;/&nbsp; 무인창업</p>
+    <span class="eyebrow">START A BUSINESS</span>
+    <h1 class="display d1">숫자부터<br>솔직하게 봅니다</h1>
+    <p class="lead">
+      무인점포·무인편의점·무인문구점·무인아이스크림 할인점 창업을 함께 도와드립니다.
+      소자본창업·무인창업으로 시작해 부업이나 투잡으로 부수입을 만드는 사장님이 많습니다.
+      자판기 창업 설치비용, 수익 구조, 직접 운영과 위탁운영의 차이까지 부풀리지 않고 알려 드립니다.
+    </p>
+  </div>
+</section>
+
+<!-- ================= 왜 무인인가 ================= -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="grid g4">
+      <article class="card rv"><span class="card__no">01</span><h3>인건비 0원</h3><p>추가 인력 없이 운영됩니다. 매출에서 인건비가 빠지지 않는 구조입니다.</p></article>
+      <article class="card rv"><span class="card__no">02</span><h3>소자본 시작</h3><p>구매가 부담되면 자판기 대여·렌탈·임대로 초기 비용을 낮춰 시작할 수 있습니다.</p></article>
+      <article class="card rv"><span class="card__no">03</span><h3>부업 · 투잡 가능</h3><p>상주할 필요가 없어 본업과 병행할 수 있습니다. 보충 주기는 자리에 따라 다릅니다.</p></article>
+      <article class="card rv"><span class="card__no">04</span><h3>확장이 쉬움</h3><p>한 자리에서 검증되면 같은 방식으로 대수를 늘려 나가는 사장님이 많습니다.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 수익 구조 ================= -->
+<section class="section section--white">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">REVENUE</span>
+      <h2 class="display d2">자판기 수익은 이렇게 계산합니다</h2>
+      <p class="lead">
+        구조 자체는 단순합니다. <b>판매금액 − 상품 원가 − 고정비(자리 사용료·전기·통신·카드수수료) = 수익</b>.
+        아래에 사장님 상황의 숫자를 넣어 보시면 대략의 그림이 나옵니다.
+      </p>
+    </div>
+
+    <div class="grid g2" style="gap:clamp(20px,3vw,34px);align-items:start">
+      <div class="card rv">
+        <h3 style="margin-bottom:18px">간단 수익 계산</h3>
+        <label class="field"><span>하루 평균 판매 개수</span>
+          <input class="input" id="cQty" type="number" min="0" step="1" value="30"></label>
+        <label class="field"><span>평균 판매 단가 (원)</span>
+          <input class="input" id="cPrice" type="number" min="0" step="100" value="1500"></label>
+        <label class="field"><span>상품 원가율 (%)</span>
+          <input class="input" id="cCost" type="number" min="0" max="100" step="1" value="60"></label>
+        <label class="field" style="margin-bottom:0"><span>월 고정비 (자리 사용료 · 전기 · 통신 등, 원)</span>
+          <input class="input" id="cFixed" type="number" min="0" step="10000" value="150000"></label>
+      </div>
+
+      <div class="card rv" style="background:var(--forest);border-color:var(--forest)">
+        <p style="color:#a9b2ab;font-size:12.5px;letter-spacing:.16em;font-weight:600">MONTHLY (30일 기준)</p>
+        <div class="calc-row"><span>예상 월 매출</span><b id="oRev">–</b></div>
+        <div class="calc-row"><span>상품 원가</span><b id="oCost">–</b></div>
+        <div class="calc-row"><span>고정비</span><b id="oFix">–</b></div>
+        <div class="calc-row calc-row--total"><span>예상 월 수익</span><b id="oProfit">–</b></div>
+        <p style="color:#9aa39c;font-size:12.5px;line-height:1.7;margin-top:18px">
+          입력하신 가정값으로 계산한 단순 참고치입니다. 카드 수수료·감가·보충 비용은 포함되어 있지 않으며,
+          실제 매출은 자리와 품목, 계절에 따라 크게 달라집니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 운영 방식 ================= -->
+<section class="section">
+  <div class="wrap wrap-narrow">
+    <div class="sec-head rv">
+      <span class="eyebrow">OPERATION</span>
+      <h2 class="display d2">직접 운영과 위탁운영</h2>
+      <p class="lead">어느 쪽이 맞는지는 사장님이 쓸 수 있는 시간과 자리 수에 따라 갈립니다.</p>
+    </div>
+    <div class="tbl-wrap rv">
+      <table class="tbl">
+        <thead><tr><th>구분</th><th>직접 운영</th><th>위탁 운영</th></tr></thead>
+        <tbody>
+          <tr><td>상품 보충</td><td>사장님이 직접</td><td>위탁 업체가 담당</td></tr>
+          <tr><td>수익</td><td>마진을 전부 가져감</td><td>수수료 차감 후 정산</td></tr>
+          <tr><td>손이 가는 정도</td><td>주기적으로 방문 필요</td><td>거의 없음</td></tr>
+          <tr><td>이런 분께</td><td>가까운 자리, 시간 여유 있는 분</td><td>본업이 바쁜 분, 원거리 자리</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note rv" style="margin-top:22px">
+      위탁운영 조건(수수료율·정산 주기·보충 범위)은 자리와 대수에 따라 달라집니다. 상담 시 조건을 그대로 알려 드립니다.
+    </p>
+  </div>
+</section>
+
+<!-- ================= 창업 유형 ================= -->
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">TYPES</span>
+      <h2 class="display d2">이렇게 시작하십니다</h2>
+    </div>
+    <div class="grid g3">
+      <article class="card card--hover rv">
+        <h3>자판기 1대로 시작</h3>
+        <p>가장 부담이 적은 시작입니다. 아는 매장 앞이나 아파트 단지처럼 검증하기 쉬운 자리에 한 대를 놓고,
+           숫자를 보고 나서 늘리는 방식입니다.</p>
+        <div class="keys"><span>부업</span><span>투잡</span><span>대여 가능</span></div>
+      </article>
+      <article class="card card--hover rv">
+        <h3>무인점포 · 무인편의점</h3>
+        <p>자판기 여러 대와 키오스크를 함께 놓아 24시간 무인으로 운영합니다.
+           무인아이스크림 할인점, 무인밀키트 매장 형태가 대표적입니다.</p>
+        <div class="keys"><span>무인매장</span><span>키오스크</span><span>24시간</span></div>
+      </article>
+      <article class="card card--hover rv">
+        <h3>무인문구점 · 문구 자판기</h3>
+        <p>학교·학원가 문구점을 무인으로 바꾸는 사례가 늘고 있습니다. 야간·주말에도 학용품 자판기로
+           판매가 이어지고, 미술·사무용품까지 담을 수 있습니다.</p>
+        <div class="keys"><span>학용품 자판기</span><span>문구용품</span><span>학원가</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 창업 절차 ================= -->
+<section class="section section--white">
+  <div class="wrap wrap-narrow">
+    <div class="sec-head rv">
+      <span class="eyebrow">PROCESS</span>
+      <h2 class="display d2">창업 절차</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div><h3>상담 · 자리 확인</h3><p>생각하고 계신 자리가 있으면 그 자리를, 없으면 조건에 맞는 자리 찾는 방법부터 같이 봅니다.</p></div></div>
+      <div class="step rv"><div><h3>기종 · 품목 · 비용 확정</h3><p>구입 / 렌탈 / 임대 중 방식을 정하고, 품목 구성과 예상 비용을 견적으로 확인합니다.</p></div></div>
+      <div class="step rv"><div><h3>계약 · 설치</h3><p>설치비는 무료입니다. 기기 반입, 전원 연결, 결제 단말 등록, 초기 상품 진열까지 진행합니다.</p></div></div>
+      <div class="step rv"><div><h3>운영 시작</h3><p>매출·재고를 원격으로 보는 방법과 보충 주기 잡는 법을 안내해 드립니다.</p></div></div>
+      <div class="step rv"><div><h3>점검 · 확장</h3><p>초기 판매 데이터를 보고 품목을 조정합니다. 자리가 검증되면 대수를 늘리는 단계로 넘어갑니다.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="wrap wrap-narrow">
+    <div class="sec-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="display d2">자주 묻는 질문</h2>
+    </div>
+    <div class="acc rv">
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>무인자판기 설치 비용은 얼마인가요?</span><i></i></button>
+        <div class="acc__a"><div>설치비는 무료로 진행됩니다. 자판기는 구입·렌탈·임대 중에서 선택하실 수 있고 기종과 대수에 따라 비용이 달라져, 정확한 금액은 현장 확인 후 견적으로 안내드립니다. 입지·품목 분석까지는 비용이 들지 않습니다.</div></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>어떤 종류의 자판기를 설치할 수 있나요?</span><i></i></button>
+        <div class="acc__a"><div>음료·커피·스낵 자판기는 물론 아이스크림·냉동식품 냉동자판기, 밀키트·생활용품 자판기, 여러 품목을 한 대에 담는 복합(멀티) 자판기까지 매장과 입지에 맞춰 설치합니다. 무인키오스크도 함께 진행합니다.</div></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>카드·간편결제가 되나요?</span><i></i></button>
+        <div class="acc__a"><div>네. 신용카드와 삼성페이·카카오페이·네이버페이·토스페이·QR 결제를 모두 지원합니다. 현금 없이 운영돼 관리가 편하고 매출도 자동으로 집계됩니다.</div></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>무인이라 관리가 어렵지 않나요?</span><i></i></button>
+        <div class="acc__a"><div>매출과 재고를 원격으로 확인할 수 있어 무엇을 언제 채워야 하는지 미리 알 수 있습니다. 고장이 나면 연락 주시는 대로 대응하며, 보충까지 맡기고 싶으시면 위탁운영으로 진행하실 수 있습니다.</div></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>어디에 설치하면 잘 되나요?</span><i></i></button>
+        <div class="acc__a"><div>아파트 단지, 사무실·공장, 학교·학원, 병원, 관공서, 헬스장·사우나, 스터디카페·PC방, 캠핑장처럼 사람 동선이 꾸준한 곳이 좋습니다. 방문해서 보고, 안 될 자리라면 안 된다고 먼저 말씀드립니다.</div></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>기존에 쓰던 자판기가 있는데 교체할 수 있나요?</span><i></i></button>
+        <div class="acc__a"><div>가능합니다. 노후 기기를 카드결제 되는 기종으로 교체하거나, 매장을 옮기실 때 이전 설치하는 상담도 함께 진행합니다. 기존 라인에 기종을 추가하는 것도 됩니다.</div></div>
+      </div>
+      <div class="acc__item">
+        <button class="acc__q" type="button" aria-expanded="false"><span>자판기를 사지 않고 빌려서 시작할 수 있나요?</span><i></i></button>
+        <div class="acc__a"><div>네. 렌탈·임대(대여)로 시작하실 수 있습니다. 초기 부담이 가장 적고, 자리가 맞지 않으면 정리하기도 쉬워서 처음 시작하시는 분들이 많이 선택합니다.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 상담 신청 ================= -->
+<section class="section section--ink" id="contact">
+  <div class="wrap">
+    <div class="grid g2" style="gap:clamp(28px,5vw,64px);align-items:start">
+      <div class="rv">
+        <span class="eyebrow">CONTACT</span>
+        <h2 class="display d2">무료 설치 상담</h2>
+        <p class="lead mt-m">
+          매장 위치와 업종만 알려 주시면 됩니다. 자리에 맞는 기종과 품목, 예상 비용을 정리해서 연락드립니다.
+          상담과 입지 분석은 비용이 들지 않습니다.
+        </p>
+        <div class="mt-l">
+          <p style="font-size:12.5px;letter-spacing:.16em;color:#9aa39c;font-weight:600">TEL</p>
+          <a href="tel:01068321994" class="display d3" style="color:#fff">010-6832-1994</a>
+          <p class="small" style="color:#9aa39c;margin-top:8px">상담시간 09:00 – 20:00 (연중무휴)</p>
+        </div>
+      </div>
+
+      <form class="card rv" novalidate autocomplete="on"
+            data-sheet="https://script.google.com/macros/s/AKfycbznAb0ZOODlNp-ckR5fvkqtVQijwuJ9Gl0G4KxDrfp-K7zM4fcfMMp5qDhAbwNkvYQG/exec">
+        <input type="hidden" name="sheet" value="무인자판기">
+        <input type="hidden" name="_form" value="무인자판기 설치 상담">
+        <label class="field"><span>성함</span>
+          <input class="input" type="text" name="성함" placeholder="홍길동" required></label>
+        <label class="field"><span>연락처</span>
+          <input class="input" type="tel" name="연락처" placeholder="010-0000-0000" required></label>
+        <label class="field"><span>설치 예정 지역</span>
+          <input class="input" type="text" name="설치예정지역" placeholder="예) 서울 강남구 역삼동"></label>
+        <label class="field"><span>업종 · 설치 장소</span>
+          <select class="input" name="설치장소">
+            <option>아파트 · 오피스텔</option>
+            <option>사무실 · 오피스</option>
+            <option>공장 · 물류센터</option>
+            <option>헬스장 · 사우나 · 찜질방</option>
+            <option>스터디카페 · 독서실 · PC방</option>
+            <option>학교 · 관공서 · 공공기관</option>
+            <option>병원 · 약국</option>
+            <option>캠핑장 · 펜션 · 낚시터</option>
+            <option>무인매장 · 무인점포</option>
+            <option>기타 (문의 내용에 기재)</option>
+          </select></label>
+        <label class="field"><span>관심 있는 기종</span>
+          <select class="input" name="관심기종">
+            <option>음료 · 커피 자판기</option>
+            <option>스낵 · 과자 자판기</option>
+            <option>아이스크림 · 냉동 자판기</option>
+            <option>생활용품 · 잡화 자판기</option>
+            <option>복합(멀티) 자판기</option>
+            <option>무인키오스크</option>
+            <option>아직 모르겠습니다 (추천 요청)</option>
+          </select></label>
+        <label class="field"><span>문의 내용</span>
+          <textarea class="input" name="문의내용" placeholder="공간 크기, 원하시는 품목, 궁금하신 점을 자유롭게 적어 주세요."></textarea></label>
+        <label style="display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--ink-2);margin-bottom:18px;cursor:pointer">
+          <input type="checkbox" name="개인정보동의" value="동의" style="margin-top:5px">
+          <span>개인정보(성함·연락처) 수집 및 상담 목적 이용에 동의합니다.</span>
+        </label>
+        <button class="btn" type="submit" style="width:100%">상담 신청하기 <span class="ar">→</span></button>
+        <p class="note" data-result hidden style="margin-top:16px"></p>
+        <p class="small" style="margin-top:14px">
+          입력하신 정보는 상담 목적으로만 사용되며, 상담 종료 후 파기됩니다.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <div class="ftr__logo">VENDA</div>
+        <p>무인자판기 · 무인키오스크 설치 전문. 자리와 품목에 맞는 구성으로 전국에 설치합니다.</p>
+        <p style="margin-top:14px">대표번호 <a href="tel:01068321994">010-6832-1994</a><br>상담시간 09:00 – 20:00 (연중무휴)</p>
+      </div>
+      <div>
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="machines.html">자판기소개</a></li>
+          <li><a href="locations.html">지역찾기</a></li>
+          <li><a href="installations.html">설치현황</a></li>
+          <li><a href="startup.html">무인창업</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="#contact">설치 상담 신청</a></li>
+          <li><a href="#faq">자주 묻는 질문</a></li>
+          <li><a href="machines.html#payment">결제 · 관리 시스템</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bot">
+      <span>© <span class="yr">2026</span> VENDA. All rights reserved.</span>
+      <span>상호 · 사업자등록번호 · 주소 등 사업자 정보 표기 예정</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a href="tel:01068321994">전화 상담</a>
+  <a href="#contact">무료 설치 상담</a>
+</div>
+
+<script src="assets/js/site.js"></script>
+<script>
+/* 간단 수익 계산 */
+(function () {
+  var ids = ['cQty', 'cPrice', 'cCost', 'cFixed'];
+  var el = {}; ids.forEach(function (i) { el[i] = document.getElementById(i); });
+  var won = function (n) { return Math.round(n).toLocaleString('ko-KR') + '원'; };
+
+  function calc() {
+    var qty = +el.cQty.value || 0, price = +el.cPrice.value || 0;
+    var rate = Math.min(Math.max(+el.cCost.value || 0, 0), 100) / 100;
+    var fixed = +el.cFixed.value || 0;
+    var rev = qty * price * 30;
+    var cost = rev * rate;
+    var profit = rev - cost - fixed;
+    document.getElementById('oRev').textContent = won(rev);
+    document.getElementById('oCost').textContent = '− ' + won(cost);
+    document.getElementById('oFix').textContent = '− ' + won(fixed);
+    document.getElementById('oProfit').textContent = won(profit);
+    document.getElementById('oProfit').style.color = profit < 0 ? '#e0a07a' : '#fff';
+  }
+  ids.forEach(function (i) { el[i].addEventListener('input', calc); });
+  calc();
+  document.querySelectorAll('.yr').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+})();
+</script>
+</body>
+</html>

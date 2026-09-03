@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>지역별 무인자판기 설치 안내 | VENDA</title>
+<meta name="description" content="선택하신 지역의 무인자판기·무인키오스크 설치 안내입니다. 설치비 무료, 렌탈·임대 가능, 카드·간편결제 지원. 방문 상담 후 자리에 맞는 기종으로 설치해 드립니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="index.html">
+      <span class="logo__mark">VENDA</span>
+      <span class="logo__sub">무인자판기 설치</span>
+    </a>
+    <nav class="nav">
+      <a href="machines.html">자판기소개</a>
+      <a href="locations.html" aria-current="page">지역찾기</a>
+      <a href="installations.html">설치현황</a>
+      <a href="startup.html">무인창업</a>
+    </nav>
+    <div class="hdr__cta">
+      <a class="hdr__tel" href="tel:01068321994">010-6832-1994</a>
+      <a class="btn btn--sm" href="startup.html#contact">설치 상담</a>
+      <button class="burger" type="button" aria-label="메뉴 열기" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mnav">
+    <a href="machines.html">자판기소개</a>
+    <a href="locations.html">지역찾기</a>
+    <a href="installations.html">설치현황</a>
+    <a href="startup.html">무인창업</a>
+    <a class="btn" href="startup.html#contact">무료 설치 상담 신청</a>
+  </div>
+</header>
+
+<!-- ================= 지역 히어로 ================= -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div>
+      <p class="crumb"><a href="index.html">홈</a> &nbsp;/&nbsp; <a href="locations.html">지역찾기</a> &nbsp;/&nbsp; <b id="crumbArea">지역</b></p>
+      <span class="eyebrow" id="rProvName">REGION</span>
+      <h1 class="display d1 hero__title" id="rTitle">무인자판기 설치</h1>
+      <p class="lead" id="rLead"></p>
+      <div class="btns" style="margin-top:30px">
+        <a class="btn" href="tel:01068321994">010-6832-1994 전화 상담 <span class="ar">→</span></a>
+        <a class="btn btn--ghost" href="startup.html#contact">온라인 상담 신청</a>
+      </div>
+      <div class="hero__meta">
+        <div><strong>설치비 0원</strong><span>렌탈 · 임대 가능</span></div>
+        <div><strong>방문 상담</strong><span>입지 · 품목 분석</span></div>
+        <div><strong>간편결제</strong><span>카드 · 페이 · QR</span></div>
+      </div>
+    </div>
+    <div class="hero__art"><span data-vm="drink"></span></div>
+  </div>
+</section>
+
+<!-- ================= 지역 안내 ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="grid g2" style="gap:clamp(26px,4vw,56px);align-items:start">
+      <div class="rv">
+        <h2 class="display d2" id="rH2">지역 무인자판기 설치 안내</h2>
+        <p class="lead mt-m" id="rBody1"></p>
+        <p class="lead mt-s">
+          음료·커피 자판기, 스낵·과자 자판기, 아이스크림·냉동 자판기, 생활용품·잡화 자판기,
+          복합(멀티) 자판기까지 매장과 입지에 맞춰 설치합니다. 무인매장·무인카페·셀프주문 매장에서
+          쓰는 무인키오스크 설치·렌탈·임대도 함께 진행합니다.
+        </p>
+        <p class="lead mt-s">
+          설치비는 무료이며 카드·삼성페이·카카오페이·네이버페이·QR 간편결제를 모두 지원합니다.
+          설치 후에는 매출과 재고를 원격으로 확인하실 수 있습니다.
+        </p>
+        <div class="btns mt-l">
+          <a class="btn btn--ghost" href="machines.html">자판기 종류 보기 <span class="ar">→</span></a>
+        </div>
+      </div>
+
+      <div class="rv">
+        <div class="card">
+          <h3 id="rNearTitle">인근 동네</h3>
+          <p class="small" style="margin:6px 0 16px">아래 지역도 같은 담당자가 방문합니다.</p>
+          <div class="gu-list" id="rDongs"></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h3 id="rSiblingTitle">같은 시·도 다른 지역</h3>
+          <p class="small" style="margin:6px 0 16px">지역을 바꿔서 확인해 보세요.</p>
+          <div class="gu-list" id="rSiblings"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 이런 자리에 ================= -->
+<section class="section section--white">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">PLACEMENT</span>
+      <h2 class="display d2" id="rPlaceTitle">이런 자리에 많이 설치합니다</h2>
+      <p class="lead">같은 자판기라도 어디에 두느냐에 따라 잘 나가는 품목이 다릅니다.</p>
+    </div>
+    <div class="grid g4">
+      <article class="card rv"><h3>아파트 · 오피스텔</h3><p>단지 입구·엘리베이터 홀. 생수·아이스크림·생필품이 꾸준합니다.</p></article>
+      <article class="card rv"><h3>사무실 · 공장</h3><p>커피·생수 회전이 빠르고, 교대 근무지는 야식·음료가 강합니다.</p></article>
+      <article class="card rv"><h3>헬스장 · 사우나</h3><p>이온·단백질 음료에 세면용품·수건 수요가 함께 붙습니다.</p></article>
+      <article class="card rv"><h3>스터디카페 · PC방</h3><p>커피·간식·컵라면. 무인 운영과 특히 잘 맞는 자리입니다.</p></article>
+      <article class="card rv"><h3>학교 · 관공서</h3><p>자동판매기·셀프자판기로 불리는 자리. 입찰 서류까지 함께 챙깁니다.</p></article>
+      <article class="card rv"><h3>병원 · 약국 주변</h3><p>음료와 함께 화장품·마스크 자판기 문의가 많습니다.</p></article>
+      <article class="card rv"><h3>캠핑장 · 펜션</h3><p>근처에 편의점이 없을수록 회전이 좋습니다.</p></article>
+      <article class="card rv"><h3>무인매장 · 무인점포</h3><p>키오스크와 함께 세팅해 24시간 직원 없이 운영합니다.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="section section--ink">
+  <div class="wrap wrap-narrow" style="text-align:center">
+    <h2 class="display d2 rv" id="rCta">무인자판기 설치 상담</h2>
+    <p class="lead rv" style="margin:20px auto 0">설치비 무료 · 방문 입지 상담 · 구입 / 렌탈 / 임대 선택 가능</p>
+    <div class="btns rv" style="justify-content:center;margin-top:34px">
+      <a class="btn btn--light" href="tel:01068321994">010-6832-1994 전화 상담</a>
+      <a class="btn" style="background:transparent;border-color:rgba(255,255,255,.4);color:#fff" href="startup.html#contact">온라인 상담 신청</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__top">
+      <div>
+        <div class="ftr__logo">VENDA</div>
+        <p>무인자판기 · 무인키오스크 설치 전문. 자리와 품목에 맞는 구성으로 전국에 설치합니다.</p>
+        <p style="margin-top:14px">대표번호 <a href="tel:01068321994">010-6832-1994</a><br>상담시간 09:00 – 20:00 (연중무휴)</p>
+      </div>
+      <div>
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="machines.html">자판기소개</a></li>
+          <li><a href="locations.html">지역찾기</a></li>
+          <li><a href="installations.html">설치현황</a></li>
+          <li><a href="startup.html">무인창업</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="startup.html#contact">설치 상담 신청</a></li>
+          <li><a href="startup.html#faq">자주 묻는 질문</a></li>
+          <li><a href="locations.html">전국 설치 지역</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__bot">
+      <span>© <span class="yr">2026</span> VENDA. All rights reserved.</span>
+      <span>상호 · 사업자등록번호 · 주소 등 사업자 정보 표기 예정</span>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a href="tel:01068321994">전화 상담</a>
+  <a href="startup.html#contact">무료 설치 상담</a>
+</div>
+
+<script src="assets/js/region-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var slug = q.get('area') || '';
+  var dong = q.get('dong') || '';
+  var DATA = window.RDATA || [], DONGS = window.RDONGS || [];
+
+  /* 슬러그로 시·도 / 시·군·구 찾기 */
+  var prov = null, item = null;
+  DATA.forEach(function (g) {
+    g.items.forEach(function (it) { if (it[1] === slug) { prov = g; item = it; } });
+  });
+
+  if (!item) {                       // 잘못된 주소 → 지역찾기로 안내
+    document.getElementById('rTitle').textContent = '지역을 선택해 주세요';
+    document.getElementById('rLead').innerHTML =
+      '주소가 올바르지 않습니다. <a href="locations.html" style="border-bottom:1px solid var(--line)">지역찾기</a>에서 다시 선택해 주세요.';
+    return;
+  }
+
+  var gu = item[0];
+  var area = dong ? (gu + ' ' + dong) : gu;
+  var label = dong ? dong : gu;
+
+  document.title = area + ' 무인자판기 설치 — 설치비 무료 | VENDA';
+  var md = document.querySelector('meta[name="description"]');
+  if (md) md.setAttribute('content',
+    area + ' 무인자판기·무인키오스크 설치 안내. 음료·스낵·아이스크림·생활용품 자판기를 설치비 무료로 설치해 드립니다. 렌탈·임대 가능, 카드·간편결제 지원.');
+
+  document.getElementById('crumbArea').textContent = area;
+  document.getElementById('rProvName').textContent = prov.p;
+  document.getElementById('rTitle').innerHTML = area + '<br><em style="font-style:normal;color:var(--clay)">무인자판기 설치</em>';
+  document.getElementById('rLead').textContent =
+    area + ' 지역 무인자판기·무인키오스크 설치를 진행합니다. 매장과 입지를 먼저 보고 자리에 맞는 기종과 품목을 골라 드리며, 설치비는 무료입니다.';
+  document.getElementById('rH2').textContent = area + ' 무인자판기, 이렇게 설치합니다';
+  document.getElementById('rBody1').textContent =
+    label + '에서 자판기를 놓을 자리를 알려 주시면 담당자가 직접 방문해 공간 크기와 전기 위치, 동선과 유동 인원을 확인합니다. ' +
+    '안 될 자리라면 먼저 솔직하게 말씀드립니다.';
+  document.getElementById('rPlaceTitle').textContent = label + ', 이런 자리에 많이 설치합니다';
+  document.getElementById('rCta').textContent = area + ' 무인자판기 설치 상담';
+
+  /* 인근 동네 */
+  var rec = null;
+  DONGS.forEach(function (d) { if (d[0] === slug) rec = d; });
+  var dongBox = document.getElementById('rDongs');
+  document.getElementById('rNearTitle').textContent = gu + ' 동네별 안내';
+  if (rec) {
+    dongBox.innerHTML = rec[2].map(function (n) {
+      var on = (n === dong);
+      return '<a class="gu"' + (on ? ' style="background:var(--ink);color:#fff;border-color:var(--ink)"' : '') +
+             ' href="region.html?area=' + encodeURIComponent(slug) + '&dong=' + encodeURIComponent(n) + '">' + n + '</a>';
+    }).join('');
+  } else {
+    dongBox.innerHTML = '<span class="gu">동 단위 안내는 상담 시 확인해 드립니다</span>';
+  }
+
+  /* 같은 시·도의 다른 시·군·구 */
+  document.getElementById('rSiblingTitle').textContent = prov.p + ' 다른 지역';
+  document.getElementById('rSiblings').innerHTML = prov.items.map(function (it) {
+    var on = (it[1] === slug);
+    return '<a class="gu"' + (on ? ' style="background:var(--ink);color:#fff;border-color:var(--ink)"' : '') +
+           ' href="region.html?area=' + encodeURIComponent(it[1]) + '">' + it[0] + '</a>';
+  }).join('');
+
+  document.querySelectorAll('.yr').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+})();
+</script>
+</body>
+</html>
