@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://x26589334-cpu.github.io/vending-site/sitemap.xml
+Sitemap: https://pickfree.co.kr/sitemap.xml

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://x26589334-cpu.github.io/vending-site/</loc><priority>1.0</priority></url>
-  <url><loc>https://x26589334-cpu.github.io/vending-site/machines.html</loc><priority>0.9</priority></url>
-  <url><loc>https://x26589334-cpu.github.io/vending-site/locations.html</loc><priority>0.9</priority></url>
-  <url><loc>https://x26589334-cpu.github.io/vending-site/installations.html</loc><priority>0.8</priority></url>
-  <url><loc>https://x26589334-cpu.github.io/vending-site/startup.html</loc><priority>0.9</priority></url>
+  <url><loc>https://pickfree.co.kr/</loc><priority>1.0</priority></url>
+  <url><loc>https://pickfree.co.kr/machines.html</loc><priority>0.9</priority></url>
+  <url><loc>https://pickfree.co.kr/locations.html</loc><priority>0.9</priority></url>
+  <url><loc>https://pickfree.co.kr/installations.html</loc><priority>0.8</priority></url>
+  <url><loc>https://pickfree.co.kr/startup.html</loc><priority>0.9</priority></url>
 </urlset>
