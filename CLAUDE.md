@@ -16,6 +16,25 @@
 가비아 네임서버에 A 레코드 4개(185.199.108~111.153)와 `www` CNAME(`x26589334-cpu.github.io`)이
 들어가 있다. 도메인을 바꿀 일이 생기면 `CNAME` 파일 + `robots.txt` + `sitemap.xml` 세 곳을 같이 고칠 것.
 
+### 검색엔진 등록 (2026-09-04)
+
+- **구글 Search Console** — `도메인` 속성(`pickfree.co.kr`), **DNS TXT 방식**으로 소유확인.
+  가비아 DNS에 `TXT @ google-site-verification=xP_7dsnGrR1RplauBEvhTwagPaqNUNjo2uSBEFYaUNc`
+  가 들어가 있다. **이 TXT 레코드를 지우면 소유확인이 풀린다.**
+- **네이버 서치어드바이저** — `index.html` `<head>` 의
+  `<meta name="naver-site-verification" content="db86b6e3...">` 로 소유확인.
+  **이 줄을 지우면 소유확인이 풀린다.**
+- 전 페이지에 `<link rel="canonical">` 과 `og:url` 이 절대주소로 들어가 있다.
+  페이지를 추가하면 canonical·og:url·`sitemap.xml` 세 곳을 같이 챙길 것.
+- `region.html` 은 쿼리스트링으로 내용이 바뀌는 동적 페이지라 canonical을 넣지 않았다
+  (검색 노출을 원하면 정적 지역 페이지 생성이 먼저다 — 아래 "남은 작업 후보" 참고).
+
+### 푸시 권한 함정
+
+원격은 `x26589334-cpu` 소유인데 이 PC에 저장된 GitHub 로그인은 **`Applefist`** 다.
+2026-09-04 에 `Applefist` 를 이 저장소 **협업자(Collaborator)로 추가**해서 푸시가 뚫렸다.
+다른 저장소에서 `Permission ... denied to Applefist` 403 이 나오면 같은 방법으로 해결한다.
+
 ## 아직 정해지지 않은 것
 
 - **푸터 사업자 정보** — "상호 · 사업자등록번호 · 주소 등 사업자 정보 표기 예정" 자리.
