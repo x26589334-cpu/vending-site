@@ -106,24 +106,45 @@ window.initRegionUI = function (opt) {
   /* --- 검색 --- */
   if (!input || !out) return;
   var hits = [];
+
+  /* 연관 검색어 (search-kit.js) */
+  SearchKit.style();
+  var REL_FIELDS = ['tag', 'name'];
+  function relHtml(items, label) {
+    if (!items.length) return '';
+    return '<div class="sk-rel" style="padding:10px 14px 12px">'
+      + '<span class="sk-rel-label">' + SearchKit.esc(label) + '</span>'
+      + items.map(function (it) {
+          return '<button type="button" class="sk-chip" data-term="' + SearchKit.esc(it.term) + '">' + SearchKit.esc(it.label) + '</button>';
+        }).join('') + '</div>';
+  }
+  out.addEventListener('click', function (e) {
+    var chip = e.target.closest && e.target.closest('.sk-chip');
+    if (!chip) return;
+    e.preventDefault();
+    input.value = chip.getAttribute('data-term');
+    input.focus();
+    search();
+  });
   function search() {
     var raw = input.value.trim();
     if (!raw) { out.classList.remove('is-on'); out.innerHTML = ''; return; }
-    var toks = raw.toLowerCase().split(/\s+/).filter(Boolean);
-    hits = FLAT.filter(function (r) {
-      return toks.every(function (t) { return r.blob.indexOf(t) > -1; });
-    });
+    /* 띄어쓰기 무시 + 붙여 친 말 쪼개기는 search-kit.js 가 처리 */
+    FLAT.forEach(function (r) { if (!r.hay) r.hay = { s: r.blob, ns: r.blob }; });
+    hits = FLAT.filter(function (r) { return SearchKit.match(r.hay, raw); });
     hits.sort(function (a, b) {
       function rank(x) { return x.name === raw ? 0 : (x.name.indexOf(raw) === 0 ? 1 : 2); }
       return rank(a) - rank(b) || a.name.length - b.name.length;
     });
     hits = hits.slice(0, 16);
     if (!hits.length) {
-      out.innerHTML = '<div class="rsearch__none">검색 결과가 없습니다. 전화(010-6832-1994)로 문의해 주세요.</div>';
+      out.innerHTML = '<div class="rsearch__none">검색 결과가 없습니다.</div>'
+        + relHtml(SearchKit.suggest(FLAT, function (r) { return r.hay; }, raw, REL_FIELDS, { limit: 5 }), '이렇게 찾아보세요');
     } else {
       out.innerHTML = hits.map(function (r) {
         return '<a href="' + url(r.slug, r.dong) + '">' + esc(r.name) + ' 무인자판기<em>' + esc(r.tag) + '</em></a>';
-      }).join('');
+      }).join('')
+        + relHtml(SearchKit.related(hits, raw, REL_FIELDS, { limit: 5 }), '연관 검색어');
     }
     out.classList.add('is-on');
   }
