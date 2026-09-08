@@ -41,8 +41,8 @@ window.initRegionUI = function (opt) {
   });
 
   function url(slug, dong) {
-    var u = BASE + 'region.html?area=' + encodeURIComponent(slug);
-    return dong ? u + '&dong=' + encodeURIComponent(dong) : u;
+    var u = BASE + 'region/' + slug + '-vending.html';
+    return dong ? u + '?dong=' + encodeURIComponent(dong) : u;
   }
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
