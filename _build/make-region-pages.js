@@ -17,7 +17,7 @@ const OUT = path.join(ROOT, 'region');
 const SITE = 'https://pickfree.co.kr';
 const OGIMG = SITE + '/assets/img/og-image.jpg';
 const TEL = '010-6832-1994';
-const TODAY = new Date().toISOString().slice(0, 10);
+const TODAY = new Date().toLocaleDateString('sv-SE'); // 현지 날짜(UTC 로 하면 새벽에 하루 전으로 찍힌다)
 
 global.window = {};
 require(path.join(ROOT, 'assets/js/region-data.js'));
@@ -135,6 +135,7 @@ function page(ctx) {
 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">\n' +
 '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap">\n' +
 '<link rel="stylesheet" href="../assets/css/site.css">\n' +
+'  <script src="../analytics.js" defer></script>\n' +
 '</head>\n' +
 '<body>\n' +
 '\n' +
@@ -148,6 +149,7 @@ function page(ctx) {
 '      <a href="../machines.html">자판기소개</a>\n' +
 '      <a href="../locations.html" aria-current="page">지역찾기</a>\n' +
 '      <a href="../installations.html">설치현황</a>\n' +
+'      <a href="../review/index.html">설치후기</a>\n' +
 '      <a href="../startup.html">무인창업</a>\n' +
 '    </nav>\n' +
 '    <div class="hdr__cta">\n' +
@@ -160,6 +162,7 @@ function page(ctx) {
 '    <a href="../machines.html">자판기소개</a>\n' +
 '    <a href="../locations.html">지역찾기</a>\n' +
 '    <a href="../installations.html">설치현황</a>\n' +
+'    <a href="../review/index.html">설치후기</a>\n' +
 '    <a href="../startup.html">무인창업</a>\n' +
 '    <a class="btn" href="../startup.html#contact">무료 설치 상담 신청</a>\n' +
 '  </div>\n' +
@@ -280,6 +283,7 @@ faqHtml + '\n' +
 '          <li><a href="../machines.html">자판기소개</a></li>\n' +
 '          <li><a href="../locations.html">지역찾기</a></li>\n' +
 '          <li><a href="../installations.html">설치현황</a></li>\n' +
+'          <li><a href="../review/index.html">설치후기</a></li>\n' +
 '          <li><a href="../startup.html">무인창업</a></li>\n' +
 '        </ul>\n' +
 '      </div>\n' +
@@ -359,7 +363,8 @@ const main = [
   ['/machines.html', '0.9', 'monthly'],
   ['/locations.html', '0.9', 'monthly'],
   ['/installations.html', '0.8', 'monthly'],
-  ['/startup.html', '0.9', 'monthly']
+  ['/startup.html', '0.9', 'monthly'],
+  ['/review/index.html', '0.8', 'weekly']
 ];
 const lines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
@@ -373,8 +378,25 @@ urls.forEach(function (u) {
   lines.push('  <url><loc>' + u + '</loc><lastmod>' + TODAY +
              '</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>');
 });
+
+/* 설치 후기(review/) — 데일리로 계속 늘어나므로 폴더를 훑어서 자동으로 넣는다.
+   여기서 챙기지 않으면 이 생성기를 돌릴 때마다 후기 주소가 사이트맵에서 사라진다. */
+const reviewDir = path.join(ROOT, 'review');
+let reviewCount = 0;
+if (fs.existsSync(reviewDir)) {
+  fs.readdirSync(reviewDir)
+    .filter(function (f) { return f.endsWith('.html') && f !== 'index.html'; })
+    .sort().reverse()
+    .forEach(function (f) {
+      const m = f.match(/^(\d{4}-\d{2}-\d{2})/);
+      const d = m ? m[1] : TODAY;
+      lines.push('  <url><loc>' + SITE + '/review/' + f + '</loc><lastmod>' + d +
+                 '</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>');
+      reviewCount++;
+    });
+}
 lines.push('</urlset>', '');
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), lines.join('\n'), 'utf8');
 
 console.log('지역 페이지 ' + urls.length + '개 생성 -> region/');
-console.log('sitemap.xml 갱신 -> 총 ' + (main.length + urls.length) + '개 주소');
+console.log('sitemap.xml 갱신 -> 총 ' + (main.length + urls.length + reviewCount) + '개 주소 (후기 ' + reviewCount + '개 포함)');

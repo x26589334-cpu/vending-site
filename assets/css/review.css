@@ -1,0 +1,58 @@
+/* 설치 후기(review/) 전용 스타일. 본문 타이포·사진·키워드 박스만 담는다.
+   site.css 의 :root 토큰을 그대로 쓰므로 색·폰트는 여기서 정의하지 않는다.
+   이 파일은 review/ 페이지에서만 불러온다(다른 페이지 캐시에 영향 없음). */
+
+/* ---------- 글 본문 ---------- */
+.art{max-width:760px;margin:0 auto}
+.art__meta{font-size:13.5px;color:var(--muted);letter-spacing:.02em;margin:0 0 26px}
+.art__fig{margin:0 0 30px}
+.art__fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:var(--r);display:block}
+.art__fig figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6}
+.art p{font-size:16px;line-height:1.95;color:var(--ink-2);margin:0 0 20px}
+.art h2{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.6vw,26px);
+        color:var(--ink);margin:46px 0 18px;line-height:1.45}
+.art h3{font-size:17px;font-weight:600;color:var(--ink);margin:30px 0 12px}
+.art ul{margin:0 0 22px;padding-left:19px}
+.art li{font-size:15.5px;line-height:1.9;color:var(--ink-2);margin-bottom:7px}
+.art strong{color:var(--ink);font-weight:600}
+.art a{color:var(--clay);text-decoration:underline;text-underline-offset:3px}
+
+/* 동네 이름 나열 박스 */
+.dong-line{background:var(--paper-2);border:1px solid var(--line-soft);border-radius:var(--r);
+           padding:18px 20px;font-size:14.5px;line-height:2;color:var(--ink-2);margin:0 0 22px}
+
+/* 글 끝 상담 유도 */
+.art-cta{background:var(--forest);color:#efece6;border-radius:var(--r);padding:30px 28px;margin:44px 0 0}
+.art-cta h2{color:#fff;margin:0 0 12px}
+.art-cta p{color:#cfcabf;margin:0 0 20px}
+.art-cta .btns{display:flex;flex-wrap:wrap;gap:10px}
+
+/* 함께 많이 찾는 키워드 */
+.kw-box{margin:36px 0 0;padding:18px 20px;background:var(--paper-2);
+        border:1px solid var(--line-soft);border-radius:var(--r)}
+.kw-box h3{font-size:13px;letter-spacing:.06em;color:var(--muted);margin:0 0 10px;font-weight:600}
+.kw-box p{font-size:13px;line-height:1.95;color:var(--faint);margin:0}
+
+/* 사진 출처 주석 (반드시 들어간다) */
+.art-note{font-size:13px;line-height:1.8;color:var(--muted);border-left:2px solid var(--clay-soft);
+          padding:2px 0 2px 14px;margin:30px 0 0}
+
+/* 관련 링크 */
+.art-links{margin:34px 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.art-links h3{font-size:13px;letter-spacing:.06em;color:var(--muted);margin:0 0 12px;font-weight:600}
+.art-links ul{list-style:none;margin:0;padding:0}
+.art-links li{margin-bottom:8px}
+
+/* ---------- 목록 페이지 ---------- */
+.plist{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:26px}
+.pcard{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--white);
+       display:flex;flex-direction:column;transition:border-color .25s var(--ease)}
+.pcard:hover{border-color:var(--clay)}
+.pcard__img{aspect-ratio:4/3;overflow:hidden;background:var(--paper-2)}
+.pcard__img img{width:100%;height:100%;object-fit:cover;display:block}
+.pcard__body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.pcard__meta{font-size:12px;color:var(--muted);letter-spacing:.03em;margin:0 0 9px}
+.pcard__t{font-family:var(--serif);font-weight:400;font-size:18px;line-height:1.5;color:var(--ink);margin:0 0 10px}
+.pcard__t a{color:inherit;text-decoration:none}
+.pcard__t a:hover{color:var(--clay)}
+.pcard__p{font-size:14px;line-height:1.75;color:var(--ink-2);margin:0}
