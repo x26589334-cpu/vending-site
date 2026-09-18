@@ -148,7 +148,6 @@ function page(ctx) {
 '    <nav class="nav">\n' +
 '      <a href="../machines.html">자판기소개</a>\n' +
 '      <a href="../locations.html" aria-current="page">지역찾기</a>\n' +
-'      <a href="../installations.html">설치현황</a>\n' +
 '      <a href="../review/index.html">설치후기</a>\n' +
 '      <a href="../startup.html">무인창업</a>\n' +
 '    </nav>\n' +
@@ -161,7 +160,6 @@ function page(ctx) {
 '  <div class="mnav">\n' +
 '    <a href="../machines.html">자판기소개</a>\n' +
 '    <a href="../locations.html">지역찾기</a>\n' +
-'    <a href="../installations.html">설치현황</a>\n' +
 '    <a href="../review/index.html">설치후기</a>\n' +
 '    <a href="../startup.html">무인창업</a>\n' +
 '    <a class="btn" href="../startup.html#contact">무료 설치 상담 신청</a>\n' +
@@ -282,7 +280,6 @@ faqHtml + '\n' +
 '        <ul>\n' +
 '          <li><a href="../machines.html">자판기소개</a></li>\n' +
 '          <li><a href="../locations.html">지역찾기</a></li>\n' +
-'          <li><a href="../installations.html">설치현황</a></li>\n' +
 '          <li><a href="../review/index.html">설치후기</a></li>\n' +
 '          <li><a href="../startup.html">무인창업</a></li>\n' +
 '        </ul>\n' +
@@ -362,7 +359,6 @@ const main = [
   ['/', '1.0', 'weekly'],
   ['/machines.html', '0.9', 'monthly'],
   ['/locations.html', '0.9', 'monthly'],
-  ['/installations.html', '0.8', 'monthly'],
   ['/startup.html', '0.9', 'monthly'],
   ['/review/index.html', '0.8', 'weekly']
 ];
