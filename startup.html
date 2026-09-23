@@ -66,136 +66,18 @@
   <div class="wrap">
     <p class="crumb"><a href="index.html">홈</a> &nbsp;/&nbsp; 무인창업</p>
     <span class="eyebrow">START A BUSINESS</span>
-    <h1 class="display d1">숫자부터<br>솔직하게 봅니다</h1>
+    <h1 class="display d1">자판기 한 대도,<br>매장 전체도</h1>
     <p class="lead">
-      무인점포·무인편의점·무인문구점·무인아이스크림 할인점 창업을 함께 도와드립니다.
-      소자본창업·무인창업으로 시작해 부업이나 투잡으로 부수입을 만드는 사장님이 많습니다.
-      자판기 창업 설치비용, 수익 구조, 직접 운영과 위탁운영의 차이까지 부풀리지 않고 알려 드립니다.
+      "일단 자판기 한 대만 놓아 보고 싶다" 하시면 그렇게 해 드립니다. 다만 무인점포·무인편의점을 생각하고 계시다면,
+      진열대를 열어 두는 방식 대신 <b>자판기로 매장을 채우고 관리까지 맡아 드리는 무인매장 창업</b>을 함께 권해 드립니다.
+      도난·위생·기물파손처럼 무인매장에서 실제로 문제가 되는 부분이 <b>선결제 후 배출</b>이라는 구조 하나로 대부분 막히기 때문입니다.
     </p>
-  </div>
-</section>
-
-<!-- ================= 왜 무인인가 ================= -->
-<section class="section section--tight">
-  <div class="wrap">
-    <div class="grid g4">
-      <article class="card rv"><span class="card__no">01</span><h3>인건비 0원</h3><p>추가 인력 없이 운영됩니다. 매출에서 인건비가 빠지지 않는 구조입니다.</p></article>
-      <article class="card rv"><span class="card__no">02</span><h3>소자본 시작</h3><p>구매가 부담되면 자판기 대여·렌탈·임대로 초기 비용을 낮춰 시작할 수 있습니다.</p></article>
-      <article class="card rv"><span class="card__no">03</span><h3>부업 · 투잡 가능</h3><p>상주할 필요가 없어 본업과 병행할 수 있습니다. 보충 주기는 자리에 따라 다릅니다.</p></article>
-      <article class="card rv"><span class="card__no">04</span><h3>확장이 쉬움</h3><p>한 자리에서 검증되면 같은 방식으로 대수를 늘려 나가는 사장님이 많습니다.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 수익 구조 ================= -->
-<section class="section section--white">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">REVENUE</span>
-      <h2 class="display d2">자판기 수익은 이렇게 계산합니다</h2>
-      <p class="lead">
-        구조 자체는 단순합니다. <b>판매금액 − 상품 원가 − 고정비(자리 사용료·전기·통신·카드수수료) = 수익</b>.
-        아래에 사장님 상황의 숫자를 넣어 보시면 대략의 그림이 나옵니다.
-      </p>
-    </div>
-
-    <div class="grid g2" style="gap:clamp(20px,3vw,34px);align-items:start">
-      <div class="card rv">
-        <h3 style="margin-bottom:18px">간단 수익 계산</h3>
-        <label class="field"><span>하루 평균 판매 개수</span>
-          <input class="input" id="cQty" type="number" min="0" step="1" value="30"></label>
-        <label class="field"><span>평균 판매 단가 (원)</span>
-          <input class="input" id="cPrice" type="number" min="0" step="100" value="1500"></label>
-        <label class="field"><span>상품 원가율 (%)</span>
-          <input class="input" id="cCost" type="number" min="0" max="100" step="1" value="60"></label>
-        <label class="field" style="margin-bottom:0"><span>월 고정비 (자리 사용료 · 전기 · 통신 등, 원)</span>
-          <input class="input" id="cFixed" type="number" min="0" step="10000" value="150000"></label>
-      </div>
-
-      <div class="card rv" style="background:var(--forest);border-color:var(--forest)">
-        <p style="color:#a9b2ab;font-size:12.5px;letter-spacing:.16em;font-weight:600">MONTHLY (30일 기준)</p>
-        <div class="calc-row"><span>예상 월 매출</span><b id="oRev">–</b></div>
-        <div class="calc-row"><span>상품 원가</span><b id="oCost">–</b></div>
-        <div class="calc-row"><span>고정비</span><b id="oFix">–</b></div>
-        <div class="calc-row calc-row--total"><span>예상 월 수익</span><b id="oProfit">–</b></div>
-        <p style="color:#9aa39c;font-size:12.5px;line-height:1.7;margin-top:18px">
-          입력하신 가정값으로 계산한 단순 참고치입니다. 카드 수수료·감가·보충 비용은 포함되어 있지 않으며,
-          실제 매출은 자리와 품목, 계절에 따라 크게 달라집니다.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 운영 방식 ================= -->
-<section class="section">
-  <div class="wrap wrap-narrow">
-    <div class="sec-head rv">
-      <span class="eyebrow">OPERATION</span>
-      <h2 class="display d2">직접 운영과 위탁운영</h2>
-      <p class="lead">어느 쪽이 맞는지는 사장님이 쓸 수 있는 시간과 자리 수에 따라 갈립니다.</p>
-    </div>
-    <div class="tbl-wrap rv">
-      <table class="tbl">
-        <thead><tr><th>구분</th><th>직접 운영</th><th>위탁 운영</th></tr></thead>
-        <tbody>
-          <tr><td>상품 보충</td><td>사장님이 직접</td><td>위탁 업체가 담당</td></tr>
-          <tr><td>수익</td><td>마진을 전부 가져감</td><td>수수료 차감 후 정산</td></tr>
-          <tr><td>손이 가는 정도</td><td>주기적으로 방문 필요</td><td>거의 없음</td></tr>
-          <tr><td>이런 분께</td><td>가까운 자리, 시간 여유 있는 분</td><td>본업이 바쁜 분, 원거리 자리</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note rv" style="margin-top:22px">
-      위탁운영 조건(수수료율·정산 주기·보충 범위)은 자리와 대수에 따라 달라집니다. 상담 시 조건을 그대로 알려 드립니다.
-    </p>
-  </div>
-</section>
-
-<!-- ================= 창업 유형 ================= -->
-<section class="section section--paper2">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">TYPES</span>
-      <h2 class="display d2">이렇게 시작하십니다</h2>
-    </div>
-    <div class="grid g3">
-      <article class="card card--hover rv">
-        <h3>자판기 1대로 시작</h3>
-        <p>가장 부담이 적은 시작입니다. 아는 매장 앞이나 아파트 단지처럼 검증하기 쉬운 자리에 한 대를 놓고,
-           숫자를 보고 나서 늘리는 방식입니다.</p>
-        <div class="keys"><span>부업</span><span>투잡</span><span>대여 가능</span></div>
-      </article>
-      <article class="card card--hover rv">
-        <h3>무인점포 · 무인편의점</h3>
-        <p>자판기 여러 대와 키오스크를 함께 놓아 24시간 무인으로 운영합니다.
-           무인아이스크림 할인점, 무인밀키트 매장 형태가 대표적입니다.</p>
-        <div class="keys"><span>무인매장</span><span>키오스크</span><span>24시간</span></div>
-        <a class="link-more" href="#store" style="margin-top:18px">무인매장 관리 창업 보기 <span class="ar">→</span></a>
-      </article>
-      <article class="card card--hover rv">
-        <h3>무인문구점 · 문구 자판기</h3>
-        <p>학교·학원가 문구점을 무인으로 바꾸는 사례가 늘고 있습니다. 야간·주말에도 학용품 자판기로
-           판매가 이어지고, 미술·사무용품까지 담을 수 있습니다.</p>
-        <div class="keys"><span>학용품 자판기</span><span>문구용품</span><span>학원가</span></div>
-      </article>
-    </div>
   </div>
 </section>
 
 <!-- ================= 무인매장 관리 창업 ================= -->
 <section class="section section--white" id="store">
   <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">UNMANNED STORE</span>
-      <h2 class="display d2">자판기 한 대도, 매장 전체도 해 드립니다</h2>
-      <p class="lead">
-        "일단 자판기 한 대만 놓아 보고 싶다" 하시면 그렇게 해 드립니다. 다만 무인점포·무인편의점을 생각하고 계시다면,
-        진열대를 열어 두는 방식 대신 <b>자판기로 매장을 채우고 관리까지 맡아 드리는 무인매장 창업</b>을 함께 권해 드립니다.
-        도난·위생·기물파손처럼 무인매장에서 실제로 문제가 되는 부분이 <b>선결제 후 배출</b>이라는 구조 하나로 대부분 막히기 때문입니다.
-      </p>
-    </div>
-
     <figure class="sfig rv">
       <img src="assets/img/safe24/safe24-store.jpg" alt="자판기로 구성한 무인매장 전경" loading="lazy" decoding="async">
       <figcaption>자판기로 구성한 무인매장 예시. 고급 아이스크림 · 묶음 판매 아이스크림 · 얼음컵&amp;파우치음료 · 반려동물 간식 · 제로음료 · 음료&amp;생수&amp;과자로 나눠 담았습니다.</figcaption>
@@ -347,6 +229,123 @@
     </p>
     <div class="btns rv" style="justify-content:center;margin-top:26px">
       <a class="btn" href="#contact">무인매장 창업 상담하기 <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 숫자부터 솔직하게 ================= -->
+<section class="section section--white">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">NUMBERS</span>
+      <h2 class="display d2">숫자부터 솔직하게 봅니다</h2>
+      <p class="lead">
+        무인점포·무인편의점·무인문구점·무인아이스크림 할인점 창업을 함께 도와드립니다.
+        소자본창업·무인창업으로 시작해 부업이나 투잡으로 부수입을 만드는 사장님이 많습니다.
+        자판기 창업 설치비용, 수익 구조, 직접 운영과 위탁운영의 차이까지 부풀리지 않고 알려 드립니다.
+      </p>
+    </div>
+    <div class="grid g4">
+      <article class="card rv"><span class="card__no">01</span><h3>인건비 0원</h3><p>추가 인력 없이 운영됩니다. 매출에서 인건비가 빠지지 않는 구조입니다.</p></article>
+      <article class="card rv"><span class="card__no">02</span><h3>소자본 시작</h3><p>구매가 부담되면 자판기 대여·렌탈·임대로 초기 비용을 낮춰 시작할 수 있습니다.</p></article>
+      <article class="card rv"><span class="card__no">03</span><h3>부업 · 투잡 가능</h3><p>상주할 필요가 없어 본업과 병행할 수 있습니다. 보충 주기는 자리에 따라 다릅니다.</p></article>
+      <article class="card rv"><span class="card__no">04</span><h3>확장이 쉬움</h3><p>한 자리에서 검증되면 같은 방식으로 대수를 늘려 나가는 사장님이 많습니다.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 수익 구조 ================= -->
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">REVENUE</span>
+      <h2 class="display d2">자판기 수익은 이렇게 계산합니다</h2>
+      <p class="lead">
+        구조 자체는 단순합니다. <b>판매금액 − 상품 원가 − 고정비(자리 사용료·전기·통신·카드수수료) = 수익</b>.
+        아래에 사장님 상황의 숫자를 넣어 보시면 대략의 그림이 나옵니다.
+      </p>
+    </div>
+
+    <div class="grid g2" style="gap:clamp(20px,3vw,34px);align-items:start">
+      <div class="card rv">
+        <h3 style="margin-bottom:18px">간단 수익 계산</h3>
+        <label class="field"><span>하루 평균 판매 개수</span>
+          <input class="input" id="cQty" type="number" min="0" step="1" value="30"></label>
+        <label class="field"><span>평균 판매 단가 (원)</span>
+          <input class="input" id="cPrice" type="number" min="0" step="100" value="1500"></label>
+        <label class="field"><span>상품 원가율 (%)</span>
+          <input class="input" id="cCost" type="number" min="0" max="100" step="1" value="60"></label>
+        <label class="field" style="margin-bottom:0"><span>월 고정비 (자리 사용료 · 전기 · 통신 등, 원)</span>
+          <input class="input" id="cFixed" type="number" min="0" step="10000" value="150000"></label>
+      </div>
+
+      <div class="card rv" style="background:var(--forest);border-color:var(--forest)">
+        <p style="color:#a9b2ab;font-size:12.5px;letter-spacing:.16em;font-weight:600">MONTHLY (30일 기준)</p>
+        <div class="calc-row"><span>예상 월 매출</span><b id="oRev">–</b></div>
+        <div class="calc-row"><span>상품 원가</span><b id="oCost">–</b></div>
+        <div class="calc-row"><span>고정비</span><b id="oFix">–</b></div>
+        <div class="calc-row calc-row--total"><span>예상 월 수익</span><b id="oProfit">–</b></div>
+        <p style="color:#9aa39c;font-size:12.5px;line-height:1.7;margin-top:18px">
+          입력하신 가정값으로 계산한 단순 참고치입니다. 카드 수수료·감가·보충 비용은 포함되어 있지 않으며,
+          실제 매출은 자리와 품목, 계절에 따라 크게 달라집니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 운영 방식 ================= -->
+<section class="section section--white">
+  <div class="wrap wrap-narrow">
+    <div class="sec-head rv">
+      <span class="eyebrow">OPERATION</span>
+      <h2 class="display d2">직접 운영과 위탁운영</h2>
+      <p class="lead">어느 쪽이 맞는지는 사장님이 쓸 수 있는 시간과 자리 수에 따라 갈립니다.</p>
+    </div>
+    <div class="tbl-wrap rv">
+      <table class="tbl">
+        <thead><tr><th>구분</th><th>직접 운영</th><th>위탁 운영</th></tr></thead>
+        <tbody>
+          <tr><td>상품 보충</td><td>사장님이 직접</td><td>위탁 업체가 담당</td></tr>
+          <tr><td>수익</td><td>마진을 전부 가져감</td><td>수수료 차감 후 정산</td></tr>
+          <tr><td>손이 가는 정도</td><td>주기적으로 방문 필요</td><td>거의 없음</td></tr>
+          <tr><td>이런 분께</td><td>가까운 자리, 시간 여유 있는 분</td><td>본업이 바쁜 분, 원거리 자리</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note rv" style="margin-top:22px">
+      위탁운영 조건(수수료율·정산 주기·보충 범위)은 자리와 대수에 따라 달라집니다. 상담 시 조건을 그대로 알려 드립니다.
+    </p>
+  </div>
+</section>
+
+<!-- ================= 창업 유형 ================= -->
+<section class="section section--paper2">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">TYPES</span>
+      <h2 class="display d2">이렇게 시작하십니다</h2>
+    </div>
+    <div class="grid g3">
+      <article class="card card--hover rv">
+        <h3>자판기 1대로 시작</h3>
+        <p>가장 부담이 적은 시작입니다. 아는 매장 앞이나 아파트 단지처럼 검증하기 쉬운 자리에 한 대를 놓고,
+           숫자를 보고 나서 늘리는 방식입니다.</p>
+        <div class="keys"><span>부업</span><span>투잡</span><span>대여 가능</span></div>
+      </article>
+      <article class="card card--hover rv">
+        <h3>무인점포 · 무인편의점</h3>
+        <p>자판기 여러 대와 키오스크를 함께 놓아 24시간 무인으로 운영합니다.
+           무인아이스크림 할인점, 무인밀키트 매장 형태가 대표적입니다.</p>
+        <div class="keys"><span>무인매장</span><span>키오스크</span><span>24시간</span></div>
+        <a class="link-more" href="#store" style="margin-top:18px">무인매장 관리 창업 보기 <span class="ar">→</span></a>
+      </article>
+      <article class="card card--hover rv">
+        <h3>무인문구점 · 문구 자판기</h3>
+        <p>학교·학원가 문구점을 무인으로 바꾸는 사례가 늘고 있습니다. 야간·주말에도 학용품 자판기로
+           판매가 이어지고, 미술·사무용품까지 담을 수 있습니다.</p>
+        <div class="keys"><span>학용품 자판기</span><span>문구용품</span><span>학원가</span></div>
+      </article>
     </div>
   </div>
 </section>
