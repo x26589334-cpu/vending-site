@@ -110,9 +110,9 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- 5. 헤더 ---------- */
 .hdr{
   position:sticky;top:0;z-index:80;
-  background:rgba(246,243,238,.97);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  background:rgb(246,243,238);
   border-bottom:1px solid transparent;transition:.35s var(--ease);
-}
+;isolation:isolate;-webkit-backface-visibility:hidden;backface-visibility:hidden;will-change:opacity}
 .hdr.is-stuck{border-bottom-color:var(--line);background:rgba(246,243,238,.96)}
 .hdr__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:74px}
 .logo{display:flex;align-items:baseline;gap:9px}
