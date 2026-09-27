@@ -183,7 +183,7 @@ function page(ctx) {
 '        <div><strong>간편결제</strong><span>카드 · 페이 · QR</span></div>\n' +
 '      </div>\n' +
 '    </div>\n' +
-'    <div class="hero__art"><img src="../assets/img/hero-vending.jpg" alt="' + esc(areaFull) + ' 무인자판기 설치" width="819" height="1024" fetchpriority="high" decoding="async"></div>\n' +
+'    <div class="hero__art"><span data-vm="' + VM[idx % VM.length] + '"></span></div>\n' +
 '  </div>\n' +
 '</section>\n' +
 '\n' +
