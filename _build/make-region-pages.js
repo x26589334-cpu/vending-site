@@ -134,7 +134,7 @@ function page(ctx) {
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">\n' +
 '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap">\n' +
-'<link rel="stylesheet" href="../assets/css/site.css?v=4">\n' +
+'<link rel="stylesheet" href="../assets/css/site.css?v=5">\n' +
 '  <script src="../analytics.js" defer></script>\n' +
 '</head>\n' +
 '<body>\n' +
