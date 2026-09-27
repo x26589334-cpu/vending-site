@@ -134,7 +134,7 @@ function page(ctx) {
 '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css">\n' +
 '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500&display=swap">\n' +
-'<link rel="stylesheet" href="../assets/css/site.css">\n' +
+'<link rel="stylesheet" href="../assets/css/site.css?v=4">\n' +
 '  <script src="../analytics.js" defer></script>\n' +
 '</head>\n' +
 '<body>\n' +
@@ -183,7 +183,7 @@ function page(ctx) {
 '        <div><strong>간편결제</strong><span>카드 · 페이 · QR</span></div>\n' +
 '      </div>\n' +
 '    </div>\n' +
-'    <div class="hero__art"><span data-vm="' + VM[idx % VM.length] + '"></span></div>\n' +
+'    <div class="hero__art"><img src="../assets/img/hero-vending.jpg" alt="' + esc(areaFull) + ' 무인자판기 설치" width="819" height="1024" fetchpriority="high" decoding="async"></div>\n' +
 '  </div>\n' +
 '</section>\n' +
 '\n' +
