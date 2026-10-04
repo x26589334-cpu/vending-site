@@ -27,6 +27,9 @@
 .art-cta p{color:#cfcabf;margin:0 0 20px}
 .art-cta .btns{display:flex;flex-wrap:wrap;gap:10px}
 
+/* 본문 끝 관련 검색어 한 줄 */
+.art .kw-run{margin:26px 0 0;font-size:13px;line-height:1.9;color:var(--muted)}
+
 /* 함께 많이 찾는 키워드 */
 .kw-box{margin:36px 0 0;padding:18px 20px;background:var(--paper-2);
         border:1px solid var(--line-soft);border-radius:var(--r)}
